@@ -2,6 +2,7 @@
   "Name": "man",
   "Description": "Open man pages inside Micro in a new read-only tab",
   "Website": "https://github.com/Lnk016/micro-man",
+  "License": "MIT",
   "Versions": [
     {
       "Version": "1.0.0",
