@@ -1,0 +1,13 @@
+{
+  "Name": "man",
+  "Description": "Open man pages inside Micro in a new read-only tab",
+  "Website": "https://github.com/Lnk016/micro-man",
+  "Versions": [
+    {
+      "Version": "1.0.0",
+      "Require": {
+        "micro": ">=2.0.0"
+      }
+    }
+  ]
+}
