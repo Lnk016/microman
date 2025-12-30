@@ -1,6 +1,6 @@
 # man
 
-A simple Micro plugin that opens man pages inside the editor.
+Something I created for personal use, decided I could upload it here.
 
 Adds a `man` command which displays manual pages in a new, read-only tab without leaving Micro.
 
