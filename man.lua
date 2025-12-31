@@ -1,4 +1,4 @@
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 local micro  = import("micro")
 local config = import("micro/config")
@@ -15,17 +15,24 @@ function manCommand(bp, args)
         return
     end
 
-    local topic = ""
-    for i = 1, #args do
-        if i > 1 then topic = topic .. " " end
-        topic = topic .. args[i]
+    local topic = args[1]
+    for i = 2, #args do
+        topic = topic .. " " .. args[i]
     end
 
-    local out, err = shell.ExecCommand(
-        "sh",
-        "-c",
-        "MANPAGER=cat man " .. topic .. " | col -bx"
+    local view = bp:GetView()
+    local width = view.Width - 5
+    if width < 40 then
+        width = 40
+    end
+
+    local cmd = string.format(
+        "MANWIDTH=%d MANPAGER=cat man %s | col -bx",
+        width,
+        topic
     )
+
+    local out, err = shell.ExecCommand("sh", "-c", cmd)
 
     if err ~= nil or out == "" then
         micro.InfoBar():Error("No manual entry for " .. topic)
