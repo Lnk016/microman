@@ -1,7 +1,7 @@
 {
-  "Name": "man",
+  "Name": "microman",
   "Description": "Open man pages inside Micro in a new read-only tab",
-  "Website": "https://github.com/Lnk016/micro-man",
+  "Website": "https://github.com/Lnk016/microman",
   "License": "MIT",
   "Versions": [
     {
