@@ -1,5 +1,5 @@
-# man
-Something I created for personal use, decided I could upload it here.
+# microman
+A man page plugin for the Micro editor. Something I created for personal use, decided I could upload it here.
 
 Adds a `man` command which displays manual pages in a new, read-only tab without leaving Micro.
 - Opens the man page in a new tab
